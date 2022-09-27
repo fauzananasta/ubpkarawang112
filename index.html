@@ -42,7 +42,7 @@
             padding: 0;
             overflow: hidden;
             text-decoration: none;
-            background-color: #2e2b2c;            
+            background-color: #2e2b2c;
         }
 
         li {
@@ -89,6 +89,7 @@
             margin-right: 10px;
             margin-bottom: -5px;
         }
+
         h3 {
             font-family: 'Times New Roman', Times, serif;
             font-weight: 800;
@@ -139,11 +140,6 @@
             position: relative;
             margin-top: 100px;
         }
-
-    
-
-
-        
     </style>
 </head>
 
@@ -424,7 +420,7 @@
             antara data-data tersebut. Setiap tabel mempunyai sejunlah kolom di mana setiap kolom memiliki nama yang
             unik.</p>
 
-            <p>Sebuah physical data model adalah representasi dari design data yang memperhitungkan fasilitas dan kendala
+        <p>Sebuah physical data model adalah representasi dari design data yang memperhitungkan fasilitas dan kendala
             sistem database yang diberikan manajemen. Dalam siklus hidup proyek itu biasanya berasal dari model data
             logis, meskipun mingki reversed engineered dari implementasi data yang diberikan. Sebuah physical data model
             lengkap akan mencakup semua artefak database yang diperlukan untuk membuat hubungan antara tabel atau
@@ -432,7 +428,7 @@
             Physical data model biasanya dapat digunakan untuk menghitung perkiraan penyimpanan dan mungkin termasuk
             rician alokasi penyimpanan khusus untuk sistem database tertentu.</p>
 
-            <p>Saat ini, ada enam database utama dalam pasar bisnis, Oracle, Postgres, SQL Server, Sybase, DB2 dan MySQL.
+        <p>Saat ini, ada enam database utama dalam pasar bisnis, Oracle, Postgres, SQL Server, Sybase, DB2 dan MySQL.
             Ada banyak sistem RDBMS besar lainnya di luar sana, tetapi ini cenderung baik untuk menjadi warisan database
             atau digunakan dalam akademis seperti universitas atau kolese pendidikan lanjutan. Sebuah physical data
             model pada setiap pelaksanaan akan secara signifikan berbeda, paling tidak karena kebutuhan OS yang
@@ -440,20 +436,111 @@
             Windows, sedangkan Oracle dan MySQL dapat berjalan di Solaris, Linux dan sistem operasi berbasis UNIX serta
             Windows.</p>
 
-            <p>Ini berarti bahwa persyaratan disk, persyaratan keamanan dan banyak aspek lain dari physical data model akan
+        <p>Ini berarti bahwa persyaratan disk, persyaratan keamanan dan banyak aspek lain dari physical data model akan
             dipengaruhi sepenuhnya oleh RDBMS yang database administrator (atau organisasi mereka) memilih untuk
             menggunakan.</p>
-        
-            <p><a href="http://ubpkarawang.ac.id/">Universitas Buana Perjuangan Karawang</a></p>
+
+        <h2 class="teks5">Entity Relationship Diagram</h2>
+        <p>ERD (Entity Relationship Diagram) atau diagram hubungan entitas adalah sebuah diagram yang digunakan untuk
+            perancangan suatu database dan menunjukan relasi atau hubungan antar objek atau entitas beserta
+            atribut-atributnya secara detail. Dengan menggunakan ERD, sistem database yang sedang dibentuk dapat
+            digambarkan dengan lebih terstruktur dan terlihat rapi.</p>
+        <p>Selain digunakan dalam perancangan database, ERD sendiri sering digunakan untuk debugging database jika
+            terjadi masalah pada database. Untuk melakukan debug pada database bukanlah hal yang mudah, terlebih lagi
+            jika database yang mengalami masalah memiliki banyak tabel dan memerlukan penulisan SQL yang kompleks.
+            Dengan menggambarkan skema database menggunakan ERD, kamu menjadi lebih mudah untuk menemukan permasalahan
+            yang terjadi dalam database dan menyelesaikan masalah dengan mudah.</p>
+
+        <h2 class="teks6">Model Data ERD</h2>
+        <p>Sebelum membuat perancangan sistem yang tepat, kamu harus terlebih dahulu mengetahui jenis model data yang
+            digunakan. Karena model data tersebut nantinya akan berpengaruh dalam pengembangan sistem. Model ini juga
+            berguna untuk membuat dokumentasi dari segala bentuk arsitektur data. Model ini dibagi ke dalam tiga model.
+            Berikut adalah penjelasannya.</p>
+
+        <p><b><i>Model data konseptual</i></b></p>
+        <p>Model data ini adalah model data paling tinggi karena di dalamnya berisi data-data yang detail. Data
+            konseptual ini dapat kamu gunakan sebagai dasar untuk membuat satu atau lebih model data logis. Tujuan dari
+            pengembangan model data konseptual adalah untuk memberikan gambaran yang jelas mengenai struktur database
+            yang terdiri dari entitas dan relasi antara setiap entitas.</p>
+
+        <p><b><i>Model data logis</i></b></p>
+        <p>Berikutnya adalah model data logis. Model data logis ini adalah pengembangan dari model data konseptual, itu
+            sebabnya dalam proses pembuatannya model data ini dibuat lebih rinci dari model data konseptual dan dibuat
+            setelah model data konseptual selesai dibuat. Model ini digunakan untuk menambahkan informasi secara
+            eksplisit kedalam unsur-unsur model konseptual. Terdapat juga beberapa komponen dalam model data ini,
+            seperti entitas data master, operasional, dan transaksional.</p>
+
+        <p><b><i>Model data fisik</i></b></p>
+        <p>Yang terakhir adalah model data fisik. Model data fisik adalah pengembangan dari masing-masing model data
+            logis. Model data ini biasanya digunakan untuk merancang sebuah database.</p>
+
+        <h2 class="teks7">Komponen ERD</h2>
+        <p>Setelah mengetahui apa saja model data dari ER diagram, sekarang kita akan membahas komponen-komponen yang
+            digunakan dalam membuat ER diagram. Dalam sebuah ERD sendiri terdapat empat komponen utama untuk memodelkan
+            suatu sistem. Berikut adalah komponen-komponennya.</p>
+
+        <p><b><i>Entitas</i></b></p>
+        <p>Yang pertama adalah entitas. Entitas merupakan sekumpulan objek yang dapat diidentifikasi secara unik dan
+            berbeda satu dengan yang lainnya. Entitas ini biasanya digambarkan dengan lambang persegi panjang.</p>
+        <p>Lalu, ada juga yang dinamakan “Entitas lemah”. Entitas lemah ini digambarkan dengan lambang persegi panjang
+            kecil di dalam persegi panjang yang lebih besar. Mengapa disebut dengan entitas lemah? Karena entitas
+            tersebut harus terhubung langsung dengan entitas lain, sebab entitas lemah ini tidak dapat diidentifikasi
+            secara unik.</p>
+
+        <p><b><i>Atribut</i></b></p>
+        <p>Selanjutnya adalah atribut. Setiap entitas pasti memiliki atribut yang berfungsi untuk menjelaskan atau
+            mendeskripsikan karakteristik dari entitas tersebut. Ada beberapa jenis atribut yang biasa digunakan dalam
+            ERD. Berikut adalah jenis-jenisnya.</p>
+
+        <p><i>Atribut kunci</i></p>
+        <p>Atribut kunci atau Key Attributes adalah atribut yang berfungsi untuk menentukan data yang bersifat penting.
+            Biasanya atribut kunci ini berbentuk angka atau numerik. Contoh dari atribut ini adalah No. KTP, NIM (Nomor
+            Induk Mahasiswa), dan lain-lain. Atribut kunci ini dilambangkan dengan lingkaran lonjong dengan keterangan
+            di dalamnya yang diberi garis bawah.</p>
+        <p><i>Atribut simpel</i></p>
+        <p>Berikutnya adalah atribut simpel. Atribut simpel adalah atribut yang tidak dapat dipecah lagi dan bernilai
+            tunggal. Contoh dari atribut ini adalah alamat kantor, nama penerbit, dan lain-lain.</p>
+        <p><i>Atribut multinilai</i></p>
+        <p>Atribut multinilai atau Multivalue Attributes adalah atribut yang memiliki atribut lebih dari satu nilai.
+            Contoh dari atribut ini adalah sebuah website artikel yang memiliki beberapa penulis.</p>
+        <p><i>Atribut gabungan</i></p>
+        <p>Selanjutnya adalah atribut gabungan atau Composite Attributes. Atribut gabungan adalah atribut yang terdiri
+            dari beberapa atribut yang berukuran lebih kecil dan memiliki arti tertentu. Contoh dari atribut ini adalah
+            sebuah nama yang terdiri atas nama depan, nama tengah, dan nama belakang.</p>
+        <p><i>Atribut derivvatif</i></p>
+        <p>Yang terakhir adalah atribut derivatif. Atribut derivatif adalah atribut yang dihasilkan dari atribut lain
+            dan atributnya tidak wajib untuk ditulis dalam Entity Relationship Diagram. Contoh dari atribut ini adalah
+            selisih harga, usia, dan kelas.</p>
+
+        <p><b><i>Relasi</i></b></p>
+        <p>Komponen ketiga adalah relasi atau relation. Relasi dalam ERD adalah hubungan yang terjadi antara satu atau
+            lebih entitas. Relasi sendiri sering disebut dengan proses. Komponen ini digambarkan dengan lambang belah
+            ketupat. Terdapat tiga jenis relasi yang digunakan dalam ERD dan perlu kamu ketahui, berikut adalah
+            jenisnya.</p>
+        <p><i>One to one</i></p>
+        <p>One to one berarti setiap entitas hanya dapat memiliki relasi dengan satu entitas lain. Contohnya seperti
+            data mahasiswa dengan NIM (Nomor Induk Siswa).</p>
+        <p><i>One to many</i></p>
+        <p>One to many memiliki arti satu entitas dapat memiliki relasi dengan beberapa entitas, begitu pula sebaliknya.
+            Contoh dari implementasi one to many ini adalah jurusan dengan mahasiswanya.</p>
+        <p><i>Many to many</i></p>
+        <p>Many to many memiliki arti setiap entitas yang ada dapat memiliki relasi dengan entitas lain, begitu pula
+            sebaliknya. Contoh dari relasi ini adalah mahasiswa dengan data terkait UKM (Unit Kegiatan Mahasiswa).</p>
+
+        <p><b><i>Garis</i></b></p>
+        <p>Komponen terakhir adalah garis. Dalam ERD sendiri garis digunakan untuk menunjukkan hubungan entitas dalam
+            ERD. Selain menjadi penghubung, garis juga dapat menunjukkan alur atau flow dari suatu ERD.</p>
+
+        <p><a href="http://ubpkarawang.ac.id/">(www.ubpkarawang.ac.id)</a></p>
 
         <div id="profil">
             <div class="container">
                 <div class="profile-box">
                     <img src="images/ozan.png" class="profile-pic">
-            <h2>Muhammad Fauzan Zakian</h2>
-            <h2>IF21F</h2>
-            <h2>21416255201112</h2>
-            <img src="images/pic.png" alt="">
+                    <h2>Muhammad Fauzan Zakian</h2>
+                    <h2>IF21F</h2>
+                    <h2>21416255201112</h2>
+                    <img src="images/pic.png" alt="">
                 </div>
             </div>
         </div>
@@ -467,7 +554,6 @@
                         <h3>Tugas</h3>
                         <p>Basis Data</p>
                         <p>Website Artikel</p>
-                        <p><a href="http://ubpkarawang.ac.id/">Universitas Buana Perjuangan Karawang</a></p>
                     </div>
                     <div class="footer-section">
                         <h3>Tentang</h3>
@@ -487,7 +573,7 @@
             </div>
         </div>
         <div id="footer">
-            
+
             <footer class="footer-lipsum">&copy; 2022. <b>Ozan's Artcl.</b> All Rights Reserved.</footer>
 
         </div>
